@@ -9,3 +9,4 @@ def generateString(lenght, upper_letter):
         else:
             string += chr(random.randint(ord('a'), ord('z')))
     return string
+    
