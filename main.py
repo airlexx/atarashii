@@ -13,7 +13,7 @@ def generateString(lenght, upper_letter):
 input_lenght = int(input("Lenght: "))
 input_upper_letter = input("Upper Letter (y/n): ")
 
-if (input_upper_letter == "Y"):
+if (input_upper_letter == "y"):
     input_upper_letter = True
 else:
     input_upper_letter = False
