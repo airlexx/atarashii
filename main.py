@@ -17,18 +17,27 @@ def generateString(lenght, upper_letter, numbers):
                 string += chr(random.randint(ord('a'), ord('z')))
     return string
 
-input_lenght = int(input("Lenght: "))
+error = False
 
-input_upper_letter = input("Upper Letter (y/n): ")
-if (input_upper_letter == "y"):
-    input_upper_letter = True
-else:
-    input_upper_letter = False
+try:
+    input_lenght = int(input("Lenght: "))
+except:
+    error = True
+    print("unvalid input")
 
-input_numbers = input("Numbers (y/n): ")
-if (input_numbers == "y"):
-    input_numbers = True
-else:
-    input_numbers = False
+if (error == False):
+    input_upper_letter = input("Upper Letter (y/n): ")
+    if (input_upper_letter == "y"):
+        input_upper_letter = True
+    else:
+        input_upper_letter = False
 
-print(generateString(input_lenght, input_upper_letter, input_numbers))
+if (error == False):
+    input_numbers = input("Numbers (y/n): ")
+    if (input_numbers == "y"):
+        input_numbers = True
+    else:
+        input_numbers = False
+
+if (error == False):
+    print(generateString(input_lenght, input_upper_letter, input_numbers))
