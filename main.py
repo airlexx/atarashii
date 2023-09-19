@@ -26,18 +26,30 @@ except:
     print("unvalid input")
 
 if (error == False):
-    input_upper_letter = input("Upper Letter (y/n): ")
-    if (input_upper_letter == "y"):
-        input_upper_letter = True
-    else:
-        input_upper_letter = False
+    input_upper_letter = input("Upper Letter (y/N): ")
+
+    match input_upper_letter:
+        case "y":
+            input_upper_letter = True
+        case "n":
+            input_upper_letter = False
+        case "":
+            input_upper_letter = False
+        case _:
+            input_upper_letter = False
 
 if (error == False):
-    input_numbers = input("Numbers (y/n): ")
-    if (input_numbers == "y"):
-        input_numbers = True
-    else:
-        input_numbers = False
+    input_numbers = input("Numbers (Y/n): ")
+
+    match input_numbers:
+        case "y":
+            input_numbers = True
+        case "n":
+            input_numbers = False
+        case "":
+            input_numbers = True
+        case _:
+            input_numbers = False
 
 if (error == False):
     print(generateString(input_lenght, input_upper_letter, input_numbers))
