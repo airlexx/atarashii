@@ -26,7 +26,7 @@ except:
     print("unvalid input")
 
 if (error == False):
-    input_upper_letter = input("Upper Letter (y/N): ").lower()
+    input_upper_letter = input("Upper Letter (y/N): ").lower().strip()
 
     match input_upper_letter:
         case "y":
@@ -39,7 +39,7 @@ if (error == False):
             input_upper_letter = False
 
 if (error == False):
-    input_numbers = input("Numbers (Y/n): ").lower()
+    input_numbers = input("Numbers (Y/n): ").lower().strip()
 
     match input_numbers:
         case "y":
