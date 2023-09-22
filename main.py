@@ -19,6 +19,11 @@ def generateString(lenght, upper_letter, numbers):
 
 error = False
 
+print("Welcome to atarashii!")
+print("by airlex")
+print("")
+print("Password generator")
+
 try:
     input_lenght = int(input("Lenght: "))
 except:
