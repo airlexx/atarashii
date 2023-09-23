@@ -20,8 +20,7 @@ def generateString(lenght, upper_letter, numbers):
 error = False
 
 print("Welcome to atarashii!")
-print("by airlex")
-print("")
+print("by airlex\n")
 print("Password generator")
 
 try:
