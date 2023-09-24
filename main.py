@@ -17,43 +17,44 @@ def generateString(lenght, upper_letter, numbers):
                 string += chr(random.randint(ord('a'), ord('z')))
     return string
 
-error = False
+def userInput(mode: int, default: bool|int):
+    result = default
+    if (mode == 0):
+        try:
+            return [True, int(input("Enter password size: "))]
+        except:
+            print("unvalid input")
+            return [False, ""]
+
+    if (mode == 1):
+        entry = input("Do you want capital letters? (y/N): ").lower().strip()
+
+    if (mode == 2):
+        entry = input("Do you want numbers? (Y/n): ").lower().strip()
+
+    match entry:
+        case "y":
+            result = True
+        case "n":
+            result = False
+        case "":
+            result = default
+        case _:
+            result = default
+    
+    return [True, result]
 
 print("Welcome to atarashii!")
 print("by airlex\n")
 print("Password generator")
 
-try:
-    input_lenght = int(input("Lenght: "))
-except:
-    error = True
-    print("unvalid input")
+r0 = userInput(0, 4)
 
-if (error == False):
-    input_upper_letter = input("Upper Letter (y/N): ").lower().strip()
+if (r0[0]):
+    r1 = userInput(1, False)
 
-    match input_upper_letter:
-        case "y":
-            input_upper_letter = True
-        case "n":
-            input_upper_letter = False
-        case "":
-            input_upper_letter = False
-        case _:
-            input_upper_letter = False
+if (r0[0] and r1[0]):
+    r2 = userInput(2, True)
 
-if (error == False):
-    input_numbers = input("Numbers (Y/n): ").lower().strip()
-
-    match input_numbers:
-        case "y":
-            input_numbers = True
-        case "n":
-            input_numbers = False
-        case "":
-            input_numbers = True
-        case _:
-            input_numbers = False
-
-if (error == False):
-    print(generateString(input_lenght, input_upper_letter, input_numbers))
+if (r0[0] and r1[0] and r2[0]):
+    print(generateString(r0[1], r1[1], r2[1]))
