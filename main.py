@@ -1,5 +1,10 @@
 import random
 
+def welcome():
+    print("Welcome to atarashii!")
+    print("by airlex\n")
+    print("Simple password generator\n")
+
 def generateString(lenght, upper_letter, numbers):
     string = ""
 
@@ -44,9 +49,7 @@ def userInput(mode: int, default: bool|int):
     
     return [True, result]
 
-print("Welcome to atarashii!")
-print("by airlex\n")
-print("Password generator")
+welcome()
 
 r0 = userInput(0, 4)
 
