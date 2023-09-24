@@ -60,4 +60,4 @@ if (r0[0] and r1[0]):
     r2 = userInput(2, True)
 
 if (r0[0] and r1[0] and r2[0]):
-    print(generateString(r0[1], r1[1], r2[1]))
+    print("\nPassword: " + generateString(r0[1], r1[1], r2[1]))
