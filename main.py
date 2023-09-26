@@ -28,7 +28,7 @@ def userInput(mode: int, default: bool|int):
         try:
             return [True, int(input("Enter password size: "))]
         except:
-            print("unvalid input")
+            print("Unvalid input")
             return [False, ""]
 
     if (mode == 1):
