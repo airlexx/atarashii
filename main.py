@@ -49,7 +49,8 @@ def userInput(mode: int, default: bool|int):
         case "":
             result = default
         case _:
-            result = default
+            print("Unvalid input")
+            return [False, ""]
     
     return [True, result]
 
