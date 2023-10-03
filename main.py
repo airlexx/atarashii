@@ -7,7 +7,7 @@ def welcome():
 
 def generateString(lenght, upper_letter, numbers, special_char):
     string = ""
-    special_char_array = ['!','#','?','%', '*', '$', '+', '-', '@', '&', '_']
+    special_char_array = ['!','#','?','%', '*', '$', '+', '-', '@', '&', '_', '.', ';']
 
     for i  in range(0, lenght):
         num_rate = random.randint(0, 4)
